@@ -9,23 +9,33 @@ body {
   }
   
   header {
-    position: absolute;
-    top: 20px;
     text-align: center;
     width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #f0f0f0;
+    padding: 12px 0;
+    z-index: 1000; /* Ensure header stays on top */
   }
   
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    margin-top: 60px; /* To provide space below the header */
+    justify-content: flex-start;
+    margin-top: 60px; /* To provide space below the fixed header */
+    padding-top: 20px; /* To prevent content from going under the fixed header */
   }
   
   .input-section {
     display: flex;
     gap: 8px;
+    margin-bottom: 16px; /* Add some space below input section */
+  }
+  
+  .todo-list-section {
+    max-height: calc(100vh - 120px); /* Calculate max height for todo list section */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
   }
   
   ul {
