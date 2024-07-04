@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  header {
+  #todolist-header {
     text-align: center;
     width: 100%;
     position: fixed;
@@ -18,7 +18,7 @@ body {
     z-index: 1000; /* Ensure header stays on top */
   }
   
-  .container {
+  .todo-main {
     display: flex;
     flex-direction: column;
     align-items: center;
