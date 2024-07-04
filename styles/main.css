@@ -1,52 +1,69 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f0f0f0;
   }
   
   #todolist-header {
+    background-color: #333;
+    color: white;
     text-align: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #f0f0f0;
-    padding: 12px 0;
-    z-index: 1000; /* Ensure header stays on top */
+    padding: 1rem 0;
   }
   
   .todo-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 60px; /* To provide space below the fixed header */
-    padding-top: 20px; /* To prevent content from going under the fixed header */
+    justify-content: center;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
   }
   
   .input-section {
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px; /* Add some space below input section */
+    align-items: center; 
+    margin-bottom: 20px;
+  }
+
+  .input-section input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1; 
+  }
+
+  .input-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
   .todo-list-section {
-    max-height: calc(100vh - 120px); /* Calculate max height for todo list section */
-    overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
-  }
-  
-  ul {
     list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .todo-list-section ul {
     padding: 0;
   }
   
-  li {
-    padding: 8px;
-    margin-bottom: 4px;
+  .todo-list-section li {
+    padding: 10px;
+    margin-bottom: 10px;
     background-color: #f3f3f3;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
-  

@@ -20,7 +20,7 @@ function addTodo() {
 
     // localStorage에 Todo 저장
     saveTodoToLocalStorage(todo);
-
+    
     // 입력 필드 초기화
     input.value = '';
 
