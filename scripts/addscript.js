@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Todo 추가 함수
   function addTodo() {
-    var input = document.getElementById('todoInput');
-    var todoText = input.value.trim();
+    const input = document.getElementById('todoInput');
+    const todoText = input.value.trim();
   
     if (todoText !== "") {
       // Todo 객체 생성
-      var todo = {
+      const todo = {
         id: Date.now(),
         text: todoText
       };
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Todo를 화면에 추가하는 함수
   function addTodoToList(todo) {
-    var todoList = document.getElementById('todoList');
-    var li = document.createElement('li');
+    const todoList = document.getElementById('todoList');
+    const li = document.createElement('li');
     li.textContent = todo.text;
     li.dataset.id = todo.id; // 데이터셋에 Todo의 id를 저장
     todoList.appendChild(li);
@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // localStorage에 Todo를 저장하는 함수
   function saveTodoToLocalStorage(todo) {
-    var todos = JSON.parse(localStorage.getItem('todos')) || [];
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
     todos.push(todo);
     localStorage.setItem('todos', JSON.stringify(todos));
   }
   
   // localStorage에서 Todo를 로드하여 화면에 표시하는 함수
   function loadTodos() {
-    var todos = JSON.parse(localStorage.getItem('todos')) || [];
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
     todos.forEach(function(todo) {
       addTodoToList(todo);
     });
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 화면 맨 아래로 스크롤하는 함수
   function scrollToBottom() {
-    var todoListSection = document.querySelector('.todo-list-section');
+    const todoListSection = document.querySelector('.todo-list-section');
     todoListSection.scrollTop = todoListSection.scrollHeight;
   }
   
