@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // 입력 필드 초기화
       input.value = '';
+  
+      // 스크롤 맨 아래로 이동
+      scrollToBottom();
     } else {
       alert('할 일을 입력하세요!');
     }
@@ -50,5 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
     todos.forEach(function(todo) {
       addTodoToList(todo);
     });
+  }
+  
+  // 화면 맨 아래로 스크롤하는 함수
+  function scrollToBottom() {
+    var todoListSection = document.querySelector('.todo-list-section');
+    todoListSection.scrollTop = todoListSection.scrollHeight;
   }
   
