@@ -27,6 +27,7 @@ function addTodo() {
     // 스크롤 맨 아래로 이동
     scrollToBottom();
   } else {
+    // 알람
     alert('할 일을 입력하세요!');
   }
 }
